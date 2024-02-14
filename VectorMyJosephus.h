@@ -21,4 +21,8 @@ class VectorMyJosephus{
         int N;
         vector<Destination> destinationVector;
         int currentPos;
+        int generateRandomNumber();
+        string readCSV(ifstream& file, int line);
+        void parseLine(string certain);
+        void InitializeVector();
 };
