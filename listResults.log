@@ -1,0 +1,20 @@
+----------**Test ListMyJosephus**----------
+M: 2 ; N: 5 ; Selected Line: 18
+Original Destinations:
+0, London, ENG, 1, Bejing, CN, 2, Rio de Janeiro, BR, 3, Vacouver, BC, 4, Spokane, WA, 
+Round # 1
+0, London, ENG, 1, Bejing, CN, 3, Vacouver, BC, 4, Spokane, WA, 
+Round # 2
+1, Bejing, CN, 3, Vacouver, BC, 4, Spokane, WA, 
+Round # 3
+1, Bejing, CN, 3, Vacouver, BC, 
+Round # 4
+3, Vacouver, BC, 
+Order of Elimination:
+2, Rio de Janeiro, BR
+0, London, ENG
+4, Spokane, WA
+1, Bejing, CN
+
+
+Destination Chosen: Vacouver, BC
