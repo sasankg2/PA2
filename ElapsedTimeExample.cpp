@@ -36,12 +36,12 @@ void runListJosephusSimulation(int N) {
     // Record the end time
     clock_t end = clock();
 
-    // Calculate the CPU elapsed time in milliseconds
-    double elapsedTime = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000.0;
+    // Calculate the CPU elapsed time in microseconds
+    double elapsedTime = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000.0 * 1000.0;
 
-    // Print the CPU elapsed time in milliseconds
+    // Print the CPU elapsed time in microseconds
     ofstream outputFile("results.log", ios_base::app);
-    outputFile << "CPU elapsed time for ListMyJosephus in milliseconds: " << elapsedTime << endl;
+    outputFile << "CPU elapsed time for ListMyJosephus " << " for N:" << N << " in microseconds: " << elapsedTime << endl;
     outputFile.close();
 }
 void runVectorJosephusSimulation(int N) {
@@ -62,12 +62,12 @@ void runVectorJosephusSimulation(int N) {
     // Record the end time
     clock_t end = clock();
 
-    // Calculate the CPU elapsed time in milliseconds
-    double elapsedTime = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000.0;
+    // Calculate the CPU elapsed time in microseconds
+    double elapsedTime = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000.0 * 1000.0;
 
-    // Print the CPU elapsed time in milliseconds
+    // Print the CPU elapsed time in microseconds
     ofstream outputFile("results.log", ios_base::app);
-    outputFile << "CPU elapsed time for VectorMyJosephus in milliseconds: " << elapsedTime << endl;
+    outputFile << "CPU elapsed time for VectorMyJosephus " << " for N:" << N << " in microseconds: " << elapsedTime << endl;
     outputFile.close();
 }
 

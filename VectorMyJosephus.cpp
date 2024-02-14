@@ -3,9 +3,50 @@ VectorMyJosephus::VectorMyJosephus(int M, int N){
     this->M = M;
     this->N = N;
     currentPos = 0;
+    InitializeVector();
 }
 VectorMyJosephus::~VectorMyJosephus(){
     clear();
+}
+void VectorMyJosephus::InitializeVector(){
+    int line = generateRandomNumber();
+    ofstream outFile("vectorResults.log", ios_base::app);
+    outFile << "----------**Test VectorMyJosephus**----------" << endl;
+    outFile << "M: " << M << " ; " << "N: " << N << " ; " << "Selected Line: " << line << endl;
+    outFile << "Original Destinations:" << endl;
+    ifstream inputFile("destinations.csv");
+    string certain = readCSV(inputFile, line);
+    parseLine(certain);
+    outFile.close();
+}
+int VectorMyJosephus::generateRandomNumber() {
+    srand(static_cast<unsigned int>(time(nullptr)));
+    return rand() % 25 + 1;
+}
+string VectorMyJosephus::readCSV(ifstream& file, int line){
+    file.seekg(std::ios::beg);
+    for(int i=0; i<line-1; i++){
+        file.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+    string specific;
+    getline(file, specific);
+    return specific;
+}
+void VectorMyJosephus::parseLine(string certain){
+    stringstream ss(certain);
+    string token;
+    int pos=0;
+    while (std::getline(ss, token, ';')) {
+        if(pos >= N){
+            break;
+        }
+        //cout << token << endl;
+        Destination destination(pos, token);
+        destinationVector.push_back(destination);
+        pos++;
+    }
+    printAllDestinations();
+    
 }
 void VectorMyJosephus::clear(){
 
@@ -28,11 +69,9 @@ Destination VectorMyJosephus::eliminateDestination(){
         return dest;
     }
     currentPos = (currentPos + M) % currentSize();
-    vector<Destination>::iterator iter = destinationVector.begin();
-    advance(iter, currentPos);
-    dest = *iter;
+    dest = destinationVector.at(currentPos);
 
-    iter = destinationVector.erase(iter);
+    vector<Destination>::iterator iter = destinationVector.erase(destinationVector.begin() + currentPos);
     if (iter == destinationVector.end()) {
         iter = destinationVector.begin();
     } 

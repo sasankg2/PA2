@@ -21,4 +21,8 @@ class ListMyJosephus{
         int N;
         list<Destination> destinationList;
         int currentPos;
+        int generateRandomNumber();
+        string readCSV(ifstream& file, int line);
+        void parseLine(string certain);
+        void InitializeList();
 };

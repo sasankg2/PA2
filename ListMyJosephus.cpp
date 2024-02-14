@@ -2,10 +2,52 @@
 ListMyJosephus::ListMyJosephus(int M, int N){
     this->M = M;
     this->N = N;
+    //cout << "M: " << M << " ; " << "N: " << N << endl;
     currentPos = 0;
+    InitializeList();
 }
 ListMyJosephus::~ListMyJosephus(){
     clear();
+}
+void ListMyJosephus::InitializeList(){
+    int line = generateRandomNumber();
+    ofstream outFile("ListResults.log", ios_base::app);
+    outFile << "----------**Test ListrMyJosephus**----------" << endl;
+    outFile << "M: " << M << " ; " << "N: " << N << " ; " << "Selected Line: " << line << endl;
+    outFile << "Original Destinations:" << endl;
+    ifstream inputFile("destinations.csv");
+    string certain = readCSV(inputFile, line);
+    parseLine(certain);
+    outFile.close();
+}
+int ListMyJosephus::generateRandomNumber() {
+    srand(static_cast<unsigned int>(time(nullptr)));
+    return rand() % 25 + 1;
+}
+string ListMyJosephus::readCSV(ifstream& file, int line){
+    file.seekg(std::ios::beg);
+    for(int i=0; i<line-1; i++){
+        file.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+    string specific;
+    getline(file, specific);
+    return specific;
+}
+void ListMyJosephus::parseLine(string certain){
+    stringstream ss(certain);
+    string token;
+    int pos=0;
+    while (std::getline(ss, token, ';')) {
+        if(pos >= N){
+            break;
+        }
+        //cout << token << endl;
+        Destination destination(pos, token);
+        destinationList.push_back(destination);
+        pos++;
+    }
+    printAllDestinations();
+    
 }
 void ListMyJosephus::clear(){
 
