@@ -1,18 +1,18 @@
-CPU elapsed time for VectorMyJosephus in milliseconds: 0.002
-CPU elapsed time for ListMyJosephus in milliseconds: 0.003
-CPU elapsed time for VectorMyJosephus in milliseconds: 0.002
-CPU elapsed time for ListMyJosephus in milliseconds: 0.001
-CPU elapsed time for VectorMyJosephus in milliseconds: 0.001
-CPU elapsed time for ListMyJosephus in milliseconds: 0.002
-CPU elapsed time for VectorMyJosephus in milliseconds: 0.002
-CPU elapsed time for ListMyJosephus in milliseconds: 0.002
-CPU elapsed time for VectorMyJosephus in milliseconds: 0.001
-CPU elapsed time for ListMyJosephus in milliseconds: 0.001
-CPU elapsed time for VectorMyJosephus in milliseconds: 0.004
-CPU elapsed time for ListMyJosephus in milliseconds: 0.001
-CPU elapsed time for VectorMyJosephus in milliseconds: 0.003
-CPU elapsed time for ListMyJosephus in milliseconds: 0.001
-CPU elapsed time for VectorMyJosephus in milliseconds: 0.002
-CPU elapsed time for ListMyJosephus in milliseconds: 0.001
-CPU elapsed time for VectorMyJosephus in milliseconds: 0
-CPU elapsed time for ListMyJosephus in milliseconds: 0.002
+CPU elapsed time for VectorMyJosephus  for N:4 in microseconds: 402
+CPU elapsed time for ListMyJosephus  for N:4 in microseconds: 179
+CPU elapsed time for VectorMyJosephus  for N:8 in microseconds: 316
+CPU elapsed time for ListMyJosephus  for N:8 in microseconds: 390
+CPU elapsed time for VectorMyJosephus  for N:16 in microseconds: 728
+CPU elapsed time for ListMyJosephus  for N:16 in microseconds: 881
+CPU elapsed time for VectorMyJosephus  for N:32 in microseconds: 2215
+CPU elapsed time for ListMyJosephus  for N:32 in microseconds: 1591
+CPU elapsed time for VectorMyJosephus  for N:64 in microseconds: 3668
+CPU elapsed time for ListMyJosephus  for N:64 in microseconds: 4241
+CPU elapsed time for VectorMyJosephus  for N:128 in microseconds: 10084
+CPU elapsed time for ListMyJosephus  for N:128 in microseconds: 11598
+CPU elapsed time for VectorMyJosephus  for N:256 in microseconds: 27786
+CPU elapsed time for ListMyJosephus  for N:256 in microseconds: 29963
+CPU elapsed time for VectorMyJosephus  for N:512 in microseconds: 83671
+CPU elapsed time for ListMyJosephus  for N:512 in microseconds: 94754
+CPU elapsed time for VectorMyJosephus  for N:1024 in microseconds: 300489
+CPU elapsed time for ListMyJosephus  for N:1024 in microseconds: 261134
